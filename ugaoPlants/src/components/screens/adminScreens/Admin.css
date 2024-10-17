@@ -1,0 +1,80 @@
+.uploadopacity{
+    background-color: rgb(167, 167, 167);
+    opacity: 1;
+    max-height: auto;
+    height: auto;
+  
+  }
+  .uplaod-product{
+   width: 100%;
+   height: 100%;
+    background-color: rgb(255, 255, 255);
+    max-width: 50%;
+    max-height: auto;
+    /* opacity: 1; */
+    overflow-y: scroll;
+  }
+
+  
+  .input-img{
+    height: 8rem;
+
+    
+  }
+
+  
+    .displayimgBox{
+      height: 82%;
+      width: 82%;
+      max-width: 100vh;
+      max-height: 100vh;
+      z-index: 9999;
+     
+    }
+  .displayimg{
+    height: 100%;
+    width: 100%;
+    max-width: 70vh;
+    max-height: 70vh;
+  }
+
+  .delete-icon{
+    display: none;
+  }
+
+  .small-img-box:hover .delete-icon{
+
+  display: block;
+  }
+
+  .adminProductCardImage{
+    /* width: fit-content; */
+    margin: 0px auto;
+  }
+
+  .all-product-box{
+    max-height: 80vh;
+    overflow-y: scroll;
+    
+  }
+  .scrollbar-none::-webkit-scrollbar{
+    display: none;
+  }
+
+  .admin-product-card{
+    width: 200px;
+    height: 278px;
+    box-shadow: 0px 0px 9px rgb(227, 226, 226);
+  }
+  
+  .editAdminButton{
+
+  }
+
+  .adminProductHeading{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

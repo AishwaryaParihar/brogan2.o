@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+  }
+  
+  /* about ugaoo */
+  .whyugaoo h2 {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    
+  } 
+  .whyugaoo-p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  
+  }
+  
+  .img-club{
+    width: 100%;
+    height: auto;  
+  }
+  .search-box {
+    position: relative;
+    width: 130px;
+  }
+  .search-box input {
+    padding-left: 10px;
+  }
+  .search-box .fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    right: 0.7rem;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  .input-text {
+    font-size: 0.85rem;
+  }
+  .bgNav {
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+  }
+  
+  .nav-font{
+    font-size: 15.4px;
+    color: #0f4c36;
+    transition: font-weight 2s ease-in;
+    
+  }
+  .nav-font:hover{
+    color: #617a71;
+    font-weight: 300;
+  }
+
+  /* nav.css */
+
+.navbar-nav01 .dropdown-menu01 {
+  display: none;
+  color: #000000;
+  position: absolute;
+  background-color: rgb(255, 246, 244);
+  border: 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.navbar-nav01 .dropdown-hover:hover .dropdown-menu01 {
+  display: block;
+}
+
+.navbar-nav01 .dropdown-hover {
+  position: relative;
+}
+
+.dropdown-menu01 li {
+  list-style: none;
+}
+
+.dropdown-menu01 .dropdown-item01 {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #000000;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.activegreen{
+  color: #000000
+}
+
+.hover-line {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-line::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #617a71;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-line:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.group .popUPtext {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.group:hover .popUPtext {
+  display: block;
+
+}

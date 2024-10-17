@@ -1,0 +1,94 @@
+
+  /* location  */
+  .footer {
+    background-color: rgb(32,95,131);
+    /* padding: 80px 0; */
+    padding-top: 4rem;
+  }
+  .container-footer {
+    max-width: 1300px;
+    margin: auto;
+  }
+  .footer-col-ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-col {
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  .footer-col h3 {
+    font-size: 25px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .footer-col h3::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #f3f2f2;
+        width: 90px;
+        height: 2px;
+    }
+    .footer-col{
+      font-size: .8rem;
+    }
+  .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .footer-col ul li a {
+    color: #ffffff;
+    display: block;
+    font-family: "Outfit";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-feature-settings: "pnum" on, "lnum" on;
+  }
+  
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 1px;
+  }
+  
+  .footer-col .social-links a {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 8px 8px 0;
+    line-height: 40px;
+    transition: all 0.5s ease;
+  }
+  
+  .footer-col .social-links a:hover {
+    color: #fff;
+    background-color: #151515;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 574px) {
+    .footer-col {
+      width: 100%;
+    }
+  }
