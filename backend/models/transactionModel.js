@@ -82,7 +82,7 @@ const transactionModel = new mongoose.Schema(
         },
     transaction_id : {
         type:String,
-        uniqui: true,
+        unique: true,
     },
     user_id:String,
     murchant_id : String,
