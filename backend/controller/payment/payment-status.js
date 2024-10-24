@@ -1,38 +1,39 @@
-const axios = require("axios");
-const crypto = require("crypto");
-const transactiondetails = require("../../models/transactionModel");
+const axios = require('axios');
+const crypto = require('crypto');
+const transactiondetails = require('../../models/transactionModel');
 // Adjust the path as necessary
 const FRONTEND_URL = process.env.FRONTEND_URL;
 
 const paymentStatus = async (req, res) => {
-  let salt_key = process.env.SALT_KEY;
+  let salt_key = process.env.salt_key;
   const merchantTransactionId = req.query.id; // Get transaction ID from query parameters
-  const merchantId = process.env.MERCHANT_ID;
+  const merchantId = process.env.merchant_id;
 
   const keyIndex = 1;
-  const string = `/pg/v1/status/${merchantId}/${merchantTransactionId}` + salt_key;
-  const sha256 = crypto.createHash("sha256").update(string).digest("hex");
-  const checksum = sha256 + "###" + keyIndex;
+  const string =
+    `/pg/v1/status/${merchantId}/${merchantTransactionId}` + salt_key;
+  const sha256 = crypto.createHash('sha256').update(string).digest('hex');
+  const checksum = sha256 + '###' + keyIndex;
 
   const options = {
-    method: "GET",
+    method: 'GET',
     url: `https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/${merchantId}/${merchantTransactionId}`,
     headers: {
-      accept: "application/json",
-      "Content-Type": "application/json",
-      "X-VERIFY": checksum,
-      "X-MERCHANT-ID": `${merchantId}`,
+      accept: 'application/json',
+      'Content-Type': 'application/json',
+      'X-VERIFY': checksum,
+      'X-MERCHANT-ID': `${merchantId}`,
     },
   };
 
   // CHECK PAYMENT STATUS
   try {
     const response = await axios.request(options);
-    
+
     if (response.data.success === true) {
       // Payment was successful
       const transactionData = response.data; // Assuming response.data contains the transaction details
-      
+
       // Create a new transaction record in the database
       const newTransaction = new transactiondetails({
         fullName: transactionData.name, // Adjust based on actual response data structure
@@ -62,7 +63,7 @@ const paymentStatus = async (req, res) => {
       return res.redirect(url);
     }
   } catch (error) {
-    console.error("Error checking payment status:", error);
+    console.error('Error checking payment status:', error);
     const url = `${FRONTEND_URL}/failure`;
     return res.redirect(url); // Redirect to failure page in case of error
   }
