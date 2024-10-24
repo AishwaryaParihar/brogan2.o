@@ -14,7 +14,7 @@ const SummaryApi = {
     url : `${backendDomin}/api/user-details`,
     method : "get"
   },
-  logout_user : {
+  logout_useik,r : {
     url : `${backendDomin}/api/userLogout`,
     method : "get"
   },
