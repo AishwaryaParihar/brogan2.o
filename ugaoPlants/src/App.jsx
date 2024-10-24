@@ -37,6 +37,8 @@ import { CancelProces } from "./components/screens/CancelProces";
 import { ShipmentPolicy } from "./components/screens/ShipmentPolicy";
 import Payment from "./components/screens/Payment";
 import UploadAboutImage from "./components/screens/adminScreens/UploadAboutImage";
+import Success from "./components/screens/Success";
+import Failure from "./components/screens/Failure";
 
 
 function App() {
@@ -106,6 +108,8 @@ function App() {
               <Route path="/terms-conditions" element={<TermsAndConditions/>}/>
               <Route path="/cancel-policy" element={<CancelProces/>}/>
               <Route path="/shipment-policy" element={<ShipmentPolicy/>}/>
+              <Route path="success" element={<Success/>}/>
+              <Route path="/Failure" element={<Failure/>}/>
 
             </Route>
             <Route path="/admin-panel" element={<Adminpanel />}>
