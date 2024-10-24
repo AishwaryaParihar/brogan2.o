@@ -14,6 +14,7 @@ function SignIn() {
     email : "",
     password : ""
    })
+   
    const navigate = useNavigate()
   const {fetchUserDetails , fetchUserAddtoCart} = useContext(Context)
 // console.log("generalContext",generalContext.fetchUserDetails())
