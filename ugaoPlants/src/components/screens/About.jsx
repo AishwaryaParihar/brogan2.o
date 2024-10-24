@@ -43,7 +43,7 @@ const About = () => {
             <div className="text-end py-4">
 
 
-              <img src={`http://localhost:8081/${aboutus.image}`} alt="" className="img-club" />
+              <img src={`https://brogan2backend.onrender.com/${aboutus.image}`} alt="" className="img-club" />
             </div>
           </div>
         </div>

@@ -137,7 +137,7 @@ const Payment = () => {
     };
 
     try {
-      let res = await axios.post('http://localhost:8087/api/order', {
+      let res = await axios.post('https://brogan2backend.onrender.com/api/order', {
         ...paymentData,
       });
       console.log(res.data);
